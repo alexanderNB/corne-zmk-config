@@ -18,11 +18,12 @@
 // | ESC        |  A  |  R  |  S  |  T  |  D  |   |  H  |  N   |  E  |  I  |  O  | ENTER |
 // | BACKDELETE |  Z  |  X  |  C  |  V  |  B  |   |  K  |  M   | ,/; | ./:  |  Æ  |   Ø   |
 //                   | SUPER | SPACE | SYMBOL |   | SHIFT | CTRL | ALT |
+   /* &backdelete &kp Z &kp X &kp C &kp V &kp B   &kp K &kp M  &comma_semi &kp dot &kp SEMI &kp APOS */
             display-name = "Base";
             bindings = <
    &kp TAB   &kp Q &kp W &kp F &kp P &kp G   &kp J &kp L  &kp U     &kp Y   &kp BSLH &kp LEFT_BRACKET
    &kp ESC &kp A &kp R &kp S &kp T &kp D   &kp H &kp N  &kp E     &kp I   &kp O &kp ENTER
-   &backdelete &kp Z &kp X &kp C &kp V &kp B   &kp K &kp M  &comma_semi &kp dot &kp SEMI &kp APOS
+   &kp BKSP &kp Z &kp X &kp C &kp V &kp B   &kp K &kp M  &kp COMMA &kp DOT &kp SEMI &kp APOS
                   &kp LGUI &kp SPACE &kp LSHFT   &mo 1 &kp LCTRL &LALT
             >;
         };
