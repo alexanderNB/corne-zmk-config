@@ -10,27 +10,41 @@
 
 / {
     behaviors {
-        bspc_del: backspace_delete {
+        backdelete: backspace_delete {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp BACKSPACE>, <&kp DELETE>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-            keep-mods = <(MOD_RSFT)>;
+            bindings = <&kp BACKSPACE>, <&kp DEL>;
+            mods = <(MOD_LSFT)>;
+        };
+        comma: comma_semi {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp COMMA>, <&kp SEMI>;
+            mods = <(MOD_LSFT)>;
+        };
+        dot: dot_colon {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp DOT>, <&kp COLON>;
+            mods = <(MOD_LSFT)>;
         };
     };
 };
-
 / {
-        keymap {
-                compatible = "zmk,keymap";
+    keymap {
+        compatible = "zmk,keymap";
 
-                default_layer {
+        default_layer {
 // -----------------------------------------------------------------------------------------
-// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
-// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
-//                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
-                        display-name = "Base";
+// | TAB        |  Q  |  W  |  F  |  P  |  G  |   |  J  |  L   |  U  |  Y  | '/"  |   Å   |
+// | ESC        |  A  |  R  |  S  |  T  |  D  |   |  H  |  N   |  E  |  I  |  O  | ENTER |
+// | BACKDELETE |  Z  |  X  |  C  |  V  |  B  |   |  K  |  M   | ,/; | ./:  |  Æ  |   Ø   |
+//                   | SUPER | SPACE | SYMBOL |   | SHIFT | CTRL | ALT |
+            display-name = "Base";
+            bindings = <
+   &kp TAB   &kp Q &kp W &kp F &kp P &kp G   &kp J &kp L  &kp U     &kp Y   &kp BSLH &kp LEFT_BRACKET
+   &kp ESC &kp A &kp R &kp S &kp T &kp D   &kp H &kp N  &kp E     &kp I   &kp O &kp ENTER
+   &backdelete &kp Z &kp X &kp C &kp V &kp B   &kp K &kp M  &comma &dot &kp SEMI &kp APOS
                   &kp LGUI &kp SPACE &kp LSHFT   &mo 1 &kp LCTRL &LALT
             >;
         };
