@@ -37,30 +37,30 @@
 
                 default_layer {
 // -----------------------------------------------------------------------------------------
-// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
-// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
-//                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
+// | TAB        |  Q  |  W  |  F  |  P  |  G  |   |  J  |  L   |  U  |  Y  | '/"  |   Å   |
+// | ESC        |  A  |  R  |  S  |  T  |  D  |   |  H  |  N   |  E  |  I  |  O  | ENTER |
+// | BACKDELETE |  Z  |  X  |  C  |  V  |  B  |   |  K  |  M   | ,/; | ./:  |  Æ  |   Ø   |
+//                   | SUPER | SPACE | SYMBOL |   | SHIFT | CTRL | ALT |
                         display-name = "Base";
                         bindings = <
    &kp TAB   &kp Q &kp W &kp F &kp P &kp G   &kp J &kp L  &kp U     &kp Y   &kp BSLH    &kp LEFT_BRACKET
    &kp ESC &kp A &kp R &kp S &kp T &kp D   &kp H &kp N  &kp E     &kp I   &kp O &kp RET
    &backdelete &kp Z &kp X &kp C &kp V &kp B   &kp K &kp M  &commasemi &dotcolon &kp SEMI &kp APOS
-                  &kp LGUI &kp SPACE &mo 1   &kp LSHFT &mo LCTRL &kp LALT
+                  &kp LGUI &mo 1 &kp SPACE   &kp LSHFT &kp LCTRL &kp LALT
                         >;
                 };
-                lower_layer {
+                Symbol_layer {
 // -----------------------------------------------------------------------------------------
-// |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-// | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
+// |  <  |  >  |  4  |  5  |  6  |  ?  |   |  |  |  [  |  ]  |  *  |  `  |  ^  |
+// |  =  |  0  |  1  |  2  |  3  |  _  |   |  -  |  (  |  )  |  {  |  }  |  +  |
+// |  %  |  &  |  7  |  8  |  9  |  #  |   |  @  |  \  |  /  |  !  |  ~  |  $  |
+//                    |blank| HELD | BLANK |   | SPACE | CTRL | ALT |
                         display-name = "Lower";
                         bindings = <
-   &kp TAB    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp BSPC
-   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
-   &kp LSHFT  &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans &trans
-                          	        &kp LGUI     &trans       &kp SPACE      &kp RET  &trans   &kp RALT
+   &kp LT    &kp GT   &kp N4 &kp N5 &kp N6 &kp QMARK    &kp PIPE  &kp LBKT &kp RBKT &kp ASRRK &kp GRAVE &kp CARET
+   &kp EQUAL &kp N0   &kp N1 &kp N2 &kp N3 &kp UNDER    &kp MINUS &kp LPAR &kp RPAR &kp LBRC  &kp RBRC  &kp PLUS
+   &kp PRCNT &kp AMPS &kp N7 &kp N8 &kp N9 &kp HASH     &kp AT    &kp BSLH &kp FSLH &kp EXCL  &kp TILDE &kp DLLR
+                          	&trans &trans &trans            &kp SPACE &kp LCTRL &kp LALT
                         >;
                 };
 
