@@ -34,6 +34,36 @@
             bindings = <&kp BSLH>, <&kp AT>;
             mods = <(MOD_LSFT)>;
         };
+        symbols: symbol_backspace {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&mo 1>, <&kp BSPC>;
+            mods = <(MOD_LSFT)>;
+        };
+        narrow: n_left {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N>, <&kp LEFT>;
+            mods = <(MOD_LCTL)>;
+        };
+        errow: e_down {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp E>, <&kp DOWN>;
+            mods = <(MOD_LCTL)>;
+        };
+        irrow: i_up {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp I>, <&kp UP>;
+            mods = <(MOD_LCTL)>;
+        };
+        orrow: o_right {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp O>, <&kp RIGHT>;
+            mods = <(MOD_LCTL)>;
+        };
     };
 };
 
@@ -50,9 +80,9 @@
                         display-name = "Base";
                         bindings = <
    &kp TAB   &kp Q &kp W &kp F &kp P &kp G   &kp J &kp L  &kp U     &kp Y   &qoutes    &kp LEFT_BRACKET
-   &kp ESC &kp A &kp R &kp S &kp T &kp D   &kp H &kp N  &kp E     &kp I   &kp O &kp RET
+   &kp ESC &kp A &kp R &kp S &kp T &kp D   &kp H &narrow  &errow     &irrow   &orrow &kp RET
    &backdelete &kp Z &kp X &kp C &kp V &kp B   &kp K &kp M  &comma &dotcolon &kp SEMI &kp APOS
-                  &kp LGUI &mo 1 &kp SPACE   &kp LSHFT &kp LCTRL &kp LALT
+                   &kp LGUI &symbols &kp SPACE   &kp LSHFT &kp LCTRL &kp LALT
                         >;
                 };
                 symbol_layer {
@@ -67,7 +97,7 @@
    &kp NUBS    &kp LS(NUBS)   &kp N4 &kp N5 &kp N6 &kp UNDER    &kp RA(EQUAL)  &kp RA(N8) &kp RA(N9) &kp PIPE  &kp PLUS &kp RBRC
    &kp RPAR &kp N0   &kp N1 &kp N2 &kp N3 &kp QMARK    &kp FSLH &kp STAR &kp LPAR &kp RA(N7)  &kp RA(N0)  &kp MINUS
    &kp PRCNT &kp CARET &kp N7 &kp N8 &kp N9 &kp HASH     &kp RA(N2)    &kp RA(NUBS) &kp AMPS &kp EXCL  &kp RA(RBKT) &kp RA(N4)
-                          	&trans &trans &trans            &kp SPACE &kp LCTRL &kp LALT
+                          	&trans &trans &trans            &kp SPACE &kp BSPC &kp ENTER
                         >;
                 };
 // ;    qwfpgjluy'åarstdhneioioozxcvbkm,km,  ;;;;;;              QWFPGJLUY***YUY***ÅÅÅARSTDHNEIOZXCVBKMæÆæÆææÆÆÆæMMMMKMæÆÆÆ½
