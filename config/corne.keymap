@@ -66,7 +66,7 @@
                         bindings = <
    &kp NUBS    &kp LS(NUBS)   &kp N4 &kp N5 &kp N6 &kp UNDER    &kp RA(EQUAL)  &kp RA(N8) &kp RA(N9) &kp PIPE  &kp PLUS &kp RBRC
    &kp RPAR &kp N0   &kp N1 &kp N2 &kp N3 &kp QMARK    &kp FSLH &kp STAR &kp LPAR &kp RA(N7)  &kp RA(N0)  &kp MINUS
-   &kp PRCNT &kp CARET &kp N7 &kp N8 &kp N9 &kp HASH     &kp RA(N2)    &kp RA(NUBS) &kp AMPS &kp EXCL  &kp RA(RBRC) &kp RA(N4)
+   &kp PRCNT &kp CARET &kp N7 &kp N8 &kp N9 &kp HASH     &kp RA(N2)    &kp RA(NUBS) &kp AMPS &kp EXCL  &kp RA(RBKT) &kp RA(N4)
                           	&trans &trans &trans            &kp SPACE &kp LCTRL &kp LALT
                         >;
                 };
