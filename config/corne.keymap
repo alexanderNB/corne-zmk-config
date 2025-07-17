@@ -16,16 +16,22 @@
             bindings = <&kp BACKSPACE>, <&kp DELETE>;
             mods = <(MOD_LSFT)>;
         };
-        commasemi: comma_semi {
+        comma: comma_semi {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp COMMA>, <&kp SEMI>;
+            bindings = <&kp COMMA>, <&kp LT>;
             mods = <(MOD_LSFT)>;
         };
         dotcolon: dot_colon {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp DOT>, <&kp COLON>;
+            bindings = <&kp DOT>, <&kp GT>;
+            mods = <(MOD_LSFT)>;
+        };
+        qoutes: sqt_dqt {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp BSLH>, <&kp AT>;
             mods = <(MOD_LSFT)>;
         };
     };
@@ -43,19 +49,20 @@
 //                   | SUPER | SPACE | SYMBOL |   | SHIFT | CTRL | ALT |
                         display-name = "Base";
                         bindings = <
-   &kp TAB   &kp Q &kp W &kp F &kp P &kp G   &kp J &kp L  &kp U     &kp Y   &kp BSLH    &kp LEFT_BRACKET
+   &kp TAB   &kp Q &kp W &kp F &kp P &kp G   &kp J &kp L  &kp U     &kp Y   &qoutes    &kp LEFT_BRACKET
    &kp ESC &kp A &kp R &kp S &kp T &kp D   &kp H &kp N  &kp E     &kp I   &kp O &kp RET
-   &backdelete &kp Z &kp X &kp C &kp V &kp B   &kp K &kp M  &commasemi &dotcolon &kp SEMI &kp APOS
+   &backdelete &kp Z &kp X &kp C &kp V &kp B   &kp K &kp M  &comma &dotcolon &kp SEMI &kp APOS
                   &kp LGUI &mo 1 &kp SPACE   &kp LSHFT &kp LCTRL &kp LALT
                         >;
                 };
-                lower_layer {
+                symbol_layer {
+        // ",,,;;;;nn,,..!!;:4::::::::::::::::::::"ææ,,,,,,ææ...ÆÆÆÆææÆÆøøØØååÅÅ
 // -----------------------------------------------------------------------------------------
 // |  <  |  >  |  4  |  5  |  6  |  ?  |   |  |  |  [  |  ]  |  *  |  `  |  ^  |
 // |  =  |  0  |  1  |  2  |  3  |  _  |   |  -  |  (  |  )  |  {  |  }  |  +  |
 // |  %  |  &  |  7  |  8  |  9  |  #  |   |  @  |  \  |  /  |  !  |  ~  |  $  |
 //                    |blank| HELD | BLANK |   | SPACE | CTRL | ALT |
-                        display-name = "Lower";
+                        display-name = "Symbol";
                         bindings = <
    &kp LT    &kp GT   &kp N4 &kp N5 &kp N6 &kp QMARK    &kp PIPE  &kp LBKT &kp RBKT &kp STAR  &kp GRAVE &kp CARET
    &kp EQUAL &kp N0   &kp N1 &kp N2 &kp N3 &kp UNDER    &kp MINUS &kp LPAR &kp RPAR &kp LBRC  &kp RBRC  &kp PLUS
@@ -63,7 +70,7 @@
                           	&trans &trans &trans            &kp SPACE &kp LCTRL &kp LALT
                         >;
                 };
-
+// ;    qwfpgjluy'åarstdhneioioozxcvbkm,km,  ;;;;;;              QWFPGJLUY***YUY***ÅÅÅARSTDHNEIOZXCVBKMæÆæÆææÆÆÆæMMMMKMæÆÆÆ½
                 raise_layer {
 // -----------------------------------------------------------------------------------------
 // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
