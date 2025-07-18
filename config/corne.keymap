@@ -39,6 +39,7 @@
             #binding-cells = <0>;
             bindings = <&mo 1>, <&kp LCTRL>;
             mods = <(MOD_LSFT)>;
+            keep-mods = <(MOD_LSFT)>;
         };
         narrow: n_left {
             compatible = "zmk,behavior-mod-morph";
@@ -94,6 +95,18 @@
             bindings = <&kp LALT>, <&mo 2>;
             mods = <(MOD_LGUI)>;
         };
+        tog_on: toggle_layer_on_only {
+            compatible = "zmk,behavior-toggle-layer";
+            #binding-cells = <1>;
+            display-name = "Toggle Layer On";
+            toggle-mode = "on";
+        };
+        tog_off: toggle_layer_off_only {
+            compatible = "zmk,behavior-toggle-layer";
+            #binding-cells = <1>;
+            display-name = "Toggle Layer Off";
+            toggle-mode = "off";
+        };
     };
 };
 
@@ -139,8 +152,8 @@
                         bindings = <
     &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6     &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12
     &kp F13 &kp F14 &kp F15 &kp F16 &kp F17 &kp F18    &kp F19 &kp F20 &kp F21 &kp F22 &kp F23 &kp F24
-    &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4    &to 0 &to 3 &none &none &none &none
-                    	     &trans &none   &none   &none   &none    &trans
+    &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4    &tog_on 0 &tog_on 3 &none &none &none &none
+                    	     &trans &none   &none   &none   &none    &kp trans
                         >;
                 };
 
