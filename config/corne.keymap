@@ -133,6 +133,15 @@
                    &super &symbols &kp SPACE   &kp LSHFT &kp LCTRL &alt
                         >;
                 };
+                game_layer {
+                        display-name = "Game";
+                        bindings = <
+   &kp ESC   &kp Q &kp W &kp F &kp P &kp G   &kp J &kp L  &kp U     &kp Y   &qoutes    &kp LEFT_BRACKET
+   &kp LSHFT &kp A &kp R &kp S &kp T &kp D   &hhome &narrow  &errow     &irrow   &orrow &ender
+   &kp LCTRL &kp Z &kp X &kp C &kp V &kp B   &kp K &kp M  &comma &dot &kp SEMI &kp APOS
+                   &gamesuper &symbols &kp SPACE   &kp LSHFT &backdelete &alt 
+                        >;
+                };
                 symbol_layer {
 // -----------------------------------------------------------------------------------------
 // |  <  |  >  |  4  |  5  |  6  |  ?  |   |  |  |  [  |  ]  |  *  |  `  |  ^  |
@@ -162,15 +171,6 @@
                         >;
                 };
 
-                game_layer {
-                        display-name = "Game";
-                        bindings = <
-   &kp ESC   &kp Q &kp W &kp F &kp P &kp G   &kp J &kp L  &kp U     &kp Y   &qoutes    &kp LEFT_BRACKET
-   &kp LSHFT &kp A &kp R &kp S &kp T &kp D   &hhome &narrow  &errow     &irrow   &orrow &ender
-   &kp LCTRL &kp Z &kp X &kp C &kp V &kp B   &kp K &kp M  &comma &dot &kp SEMI &kp APOS
-                   &gamesuper &symbols &kp SPACE   &kp LSHFT &backdelete &alt 
-                        >;
-                };
 
                 extra_2 {
                         status = "reserved";
