@@ -22,7 +22,7 @@
             bindings = <&kp COMMA>, <&kp LT>;
             mods = <(MOD_LSFT)>;
         };
-        dotcolon: dot_colon {
+        dot: dot_colon {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp DOT>, <&kp GT>;
@@ -34,10 +34,10 @@
             bindings = <&kp BSLH>, <&kp AT>;
             mods = <(MOD_LSFT)>;
         };
-        symbols: symbol_backspace {
+        symbols: symbol_ctrl {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&mo 1>, <&kp BSPC>;
+            bindings = <&mo 1>, <&kp LCTRL>;
             mods = <(MOD_LSFT)>;
         };
         narrow: n_left {
@@ -64,6 +64,36 @@
             bindings = <&kp O>, <&kp RIGHT>;
             mods = <(MOD_LCTL)>;
         };
+        hhome: h_home {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp H>, <&kp HOME>;
+            mods = <(MOD_LCTL)>;
+        };
+        ender: enter_end {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp RET>, <&kp END>;
+            mods = <(MOD_LCTL)>;
+        };
+        super: lgui_alt_FN {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LGUI>, <&mo 2>;
+            mods = <(MOD_LALT)>;
+        };
+        gamesuper: mtlgui_alt_FN {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&mt LGUI TAB>, <&mo 2>;
+            mods = <(MOD_LALT)>;
+        };
+        alt: alt_lgui_FN {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LALT>, <&mo 2>;
+            mods = <(MOD_LGUI)>;
+        };
     };
 };
 
@@ -80,9 +110,9 @@
                         display-name = "Base";
                         bindings = <
    &kp TAB   &kp Q &kp W &kp F &kp P &kp G   &kp J &kp L  &kp U     &kp Y   &qoutes    &kp LEFT_BRACKET
-   &kp ESC &kp A &kp R &kp S &kp T &kp D   &kp H &narrow  &errow     &irrow   &orrow &kp RET
-   &backdelete &kp Z &kp X &kp C &kp V &kp B   &kp K &kp M  &comma &dotcolon &kp SEMI &kp APOS
-                   &kp LGUI &symbols &kp SPACE   &kp LSHFT &kp LCTRL &kp LALT
+   &kp ESC &kp A &kp R &kp S &kp T &kp D   &hhome &narrow  &errow     &irrow   &orrow &ender
+   &backdelete &kp Z &kp X &kp C &kp V &kp B   &kp K &kp M  &comma &dot &kp SEMI &kp APOS
+                   &super &symbols &kp SPACE   &kp LSHFT &kp LCTRL &alt
                         >;
                 };
                 symbol_layer {
@@ -104,23 +134,24 @@
 //
 //
 //
-                raise_layer {
-// -----------------------------------------------------------------------------------------
-// |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-// | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-// | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
-                        display-name = "Raise";
+                fn_layer {
+                        display-name = "FN";
                         bindings = <
-   &kp  TAB  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
-   &kp LCTRL &trans   &trans &trans   &trans   &trans      &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
-   &kp LSHFT &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE
-                    	     &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
+    &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6     &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12
+    &kp F13 &kp F14 &kp F15 &kp F16 &kp F17 &kp F18    &kp F19 &kp F20 &kp F21 &kp F22 &kp F23 &kp F24
+    &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4    &to 0 &to 3 &none &none &none &none
+                    	     &kp trans &none   &kp none   &kp none   &none    &kp trans
                         >;
                 };
 
-                extra_1 {
-                        status = "reserved";
+                game_layer {
+                        display-name = "Game";
+                        bindings = <
+   &kp ESC   &kp Q &kp W &kp F &kp P &kp G   &kp J &kp L  &kp U     &kp Y   &qoutes    &kp LEFT_BRACKET
+   &kp LSHFT &kp A &kp R &kp S &kp T &kp D   &hhome &narrow  &errow     &irrow   &orrow &ender
+   &kp LCTRL &kp Z &kp X &kp C &kp V &kp B   &kp K &kp M  &comma &dot &kp SEMI &kp APOS
+                   &gamesuper &symbols &kp SPACE   &kp LSHFT &backdelete &alt 
+                        >;
                 };
 
                 extra_2 {
