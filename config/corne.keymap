@@ -40,7 +40,7 @@
             bindings = <&kp BSLH>, <&kp AT>;
             mods = <(MOD_LSFT)>;
         };
-        symbols: symbol_ctrl {
+        symbols: symbol_bspc {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&mo SYMBOL>, <&kp BSPC>;
@@ -88,16 +88,10 @@
             bindings = <&kp LGUI>, <&mo FN>;
             mods = <(MOD_LALT)>;
         };
-        gamesuper: mtlgui_alt_FN {
+        gamesuper: mtsuper_ESC {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&mt LGUI ESC>, <&mo FN>;
-            mods = <(MOD_LALT)>;
-        };
-        gamesymbols: mtlgui_alt_FN {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&mt SYMBOL TAB>, <&mo FN>;
             mods = <(MOD_LALT)>;
         };
         alt: alt_lgui_FN {
