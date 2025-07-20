@@ -19,9 +19,8 @@
         backspace: backspace_ctrl {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp BACKSPACE>, <&kp LCTRL>;
-            mods = <(MOD_LGUI)>;
-            keep-mods = <(MOD_LGUI)>;
+            bindings = <&mt LCTRL BACKSPACE>, <&kp BACKSPACE>;
+            mods = <(MOD_LCTL)>;
         };
         comma: comma_semi {
             compatible = "zmk,behavior-mod-morph";
