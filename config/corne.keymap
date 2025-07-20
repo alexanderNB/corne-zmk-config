@@ -130,7 +130,7 @@
    &kp TAB   &kp Q &kp W &kp F &kp P &kp G   &kp J &kp L  &kp U     &kp Y   &qoutes    &kp LEFT_BRACKET
    &kp ESC &kp A &kp I &kp S &kp T &kp D   &hhome &narrow  &errow     &rrrow   &orrow &ender
    &kp LCTRL &kp Z &kp X &kp C &kp V &kp B   &kp K &kp M  &comma &dot &kp SEMI &kp APOS
-                   &super &symbols &kp SPACE   &kp LSHFT &kp BSPC &alt
+                   &super &symbols &kp SPACE   &kp LSHFT &backspace &alt
                         >;
                 };
                 game_layer {
