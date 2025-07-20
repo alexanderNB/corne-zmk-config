@@ -11,7 +11,8 @@
 #define DEFAULT 0
 #define GAME    1
 #define SYMBOL  2
-#define FN      3
+#define GAME_SYMBOL  3
+#define FN      4
 
 / {
     behaviors {
@@ -42,9 +43,8 @@
         symbols: symbol_ctrl {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&mo SYMBOL>, <&kp LCTRL>;
+            bindings = <&mo SYMBOL>, <&kp BSPC>;
             mods = <(MOD_LSFT)>;
-            keep-mods = <(MOD_LSFT)>;
         };
         narrow: n_left {
             compatible = "zmk,behavior-mod-morph";
@@ -58,10 +58,10 @@
             bindings = <&kp E>, <&kp DOWN>;
             mods = <(MOD_LCTL)>;
         };
-        irrow: i_up {
+        rrrow: r_up {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp I>, <&kp UP>;
+            bindings = <&kp R>, <&kp UP>;
             mods = <(MOD_LCTL)>;
         };
         orrow: o_right {
@@ -91,7 +91,13 @@
         gamesuper: mtlgui_alt_FN {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&mt LGUI TAB>, <&mo FN>;
+            bindings = <&mt LGUI ESC>, <&mo FN>;
+            mods = <(MOD_LALT)>;
+        };
+        gamesymbols: mtlgui_alt_FN {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&mt SYMBOL TAB>, <&mo FN>;
             mods = <(MOD_LALT)>;
         };
         alt: alt_lgui_FN {
@@ -128,18 +134,18 @@
                         display-name = "Base";
                         bindings = <
    &kp TAB   &kp Q &kp W &kp F &kp P &kp G   &kp J &kp L  &kp U     &kp Y   &qoutes    &kp LEFT_BRACKET
-   &kp ESC &kp A &kp R &kp S &kp T &kp D   &hhome &narrow  &errow     &irrow   &orrow &ender
-   &backdelete &kp Z &kp X &kp C &kp V &kp B   &kp K &kp M  &comma &dot &kp SEMI &kp APOS
-                   &super &symbols &kp SPACE   &kp LSHFT &kp LCTRL &alt
+   &kp ESC &kp A &kp I &kp S &kp T &kp D   &hhome &narrow  &errow     &rrrow   &orrow &ender
+   &kp LCTRL &kp Z &kp X &kp C &kp V &kp B   &kp K &kp M  &comma &dot &kp SEMI &kp APOS
+                   &super &symbols &kp SPACE   &kp LSHFT &kp BSPC &alt
                         >;
                 };
                 game_layer {
                         display-name = "Game";
                         bindings = <
-   &kp ESC   &kp Q &kp W &kp F &kp P &kp G   &kp J &kp L  &kp U     &kp Y   &qoutes    &kp LEFT_BRACKET
-   &kp LSHFT &kp A &kp R &kp S &kp T &kp D   &hhome &narrow  &errow     &irrow   &orrow &ender
-   &kp LCTRL &kp Z &kp X &kp C &kp V &kp B   &kp K &kp M  &comma &dot &kp SEMI &kp APOS
-                   &gamesuper &symbols &kp SPACE   &kp LSHFT &backdelete &alt 
+   &alt      &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans &trans
+   &kp LSHFT &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans &trans
+   &trans    &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans &trans
+     &gamesuper &mt GAME_SYMBOL TAB &trans   &trans &trans &trans
                         >;
                 };
                 symbol_layer {
@@ -151,16 +157,27 @@
 // |[]{}@\~$
                         display-name = "Symbol";
                         bindings = <
-   &kp NUBS    &kp LS(NUBS)   &kp KP_N4 &kp KP_N5 &kp KP_N6 &kp UNDER    &kp RA(EQUAL)  &kp RA(N8) &kp RA(N9) &kp PIPE  &kp PLUS &kp RBRC
-   &kp RPAR &kp KP_N0   &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp QMARK    &kp FSLH &kp STAR &kp LPAR &kp RA(N7)  &kp RA(N0)  &kp MINUS
-   &kp PRCNT &kp CARET &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp HASH     &kp RA(N2)    &kp RA(NUBS) &kp AMPS &kp EXCL  &kp RA(RBKT) &kp RA(N4)
-                          	&trans &trans &trans            &kp SPACE &kp BSPC &kp ENTER
+   &kp NUBS    &kp LS(NUBS)   &kp N4 &kp N5 &kp N6 &kp UNDER    &kp RA(EQUAL)  &kp RA(N8) &kp RA(N9) &kp PIPE  &kp PLUS &kp RBRC
+   &kp RPAR &kp N0   &kp N1 &kp N2 &kp N3 &kp QMARK    &kp FSLH &kp STAR &kp LPAR &kp RA(N7)  &kp RA(N0)  &kp MINUS
+   &kp PRCNT &kp CARET &kp N7 &kp N8 &kp N9 &kp HASH     &kp RA(N2)    &kp RA(NUBS) &kp AMPS &kp EXCL  &kp RA(RBKT) &kp RA(N4)
+                          	&none &trans &none            &kp SPACE &kp DEL &kp LCTRL
                         >;
                 };
-// ;    qwfpgjluy'åarstdhneioioozxcvbkm,km,  ;;;;;;              QWFPGJLUY***YUY***ÅÅÅARSTDHNEIOZXCVBKMæÆæÆææÆÆÆæMMMMKMæÆÆÆ½
-//
-//
-//
+                game_symbol_layer {
+// -----------------------------------------------------------------------------------------
+// |  <  |  >  |  4  |  5  |  6  |  ?  |   |  |  |  [  |  ]  |  *  |  `  |  ^  |
+// |  =  |  0  |  1  |  2  |  3  |  _  |   |  -  |  (  |  )  |  {  |  }  |  +  |
+// |  %  |  &  |  7  |  8  |  9  |  #  |   |  @  |  \  |  /  |  !  |  ~  |  $  |
+//                    |blank| HELD | BLANK |   | SPACE | CTRL | ALT |
+// |[]{}@\~$
+                        display-name = "G-Symbol";
+                        bindings = <
+   &alt    &kp H   &kp N4 &kp N5 &kp N6 &kp N    &kp RA(EQUAL)  &kp RA(N8) &kp RA(N9) &kp PIPE  &kp PLUS &kp RBRC
+   &kp LCTRL &kp N0   &kp N1 &kp N2 &kp N3 &kp E    &kp FSLH &kp STAR &kp LPAR &kp RA(N7)  &kp RA(N0)  &kp MINUS
+   &kp LSHFT &kp R &kp N7 &kp N8 &kp N9 &kp O     &kp RA(N2)    &kp RA(NUBS) &kp AMPS &kp EXCL  &kp RA(RBKT) &kp RA(N4)
+                          	&none &trans &none            &kp SPACE &kp DEL &kp LCTRL
+                        >;
+                };
                 fn_layer {
                         display-name = "FN";
                         bindings = <
@@ -172,11 +189,8 @@
                 };
 
 
-                extra_2 {
-                        status = "reserved";
-                };
 
-                extra_3 {
+                extra_2 {
                         status = "reserved";
                 };
         };
