@@ -16,11 +16,11 @@
 
 / {
     behaviors {
-        backdelete: backspace_delete {
+        backspace: backspace_ctrl {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp BACKSPACE>, <&kp DELETE>;
-            mods = <(MOD_LSFT)>;
+            bindings = <&kp BACKSPACE>, <&kp LCTRL>;
+            mods = <(MOD_LGUI)>;
         };
         comma: comma_semi {
             compatible = "zmk,behavior-mod-morph";
@@ -139,7 +139,7 @@
    &alt      &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans &trans
    &kp LSHFT &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans &trans
    &trans    &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans &trans
-     &gamesuper &mt GAME_SYMBOL TAB &trans   &trans &trans &trans
+     &gamesuper &lt GAME_SYMBOL TAB &trans   &trans &trans &trans
                         >;
                 };
                 symbol_layer {
