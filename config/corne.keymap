@@ -21,6 +21,7 @@
             #binding-cells = <0>;
             bindings = <&kp BACKSPACE>, <&kp LCTRL>;
             mods = <(MOD_LGUI)>;
+            keep-mods = <(MOD_LGUI)>;
         };
         comma: comma_semi {
             compatible = "zmk,behavior-mod-morph";
