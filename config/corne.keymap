@@ -100,6 +100,12 @@
             bindings = <&kp LALT>, <&mo FN>;
             mods = <(MOD_LGUI)>;
         };
+        ctrl: ctrl_backspace {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LCTRL>, <&mo BSPC>;
+            mods = <(MOD_LCTL)>;
+        };
         tog_on: toggle_layer_on_only {
             compatible = "zmk,behavior-toggle-layer";
             #binding-cells = <1>;
@@ -127,9 +133,9 @@
 //                   | SUPER | SPACE | SYMBOL |   | SHIFT | CTRL | ALT |
                         display-name = "Base";
                         bindings = <
-   &kp TAB   &kp Q &kp W &kp F &kp P &kp G   &kp J &kp L  &kp U     &kp Y   &qoutes    &kp LEFT_BRACKET
+   &kp TAB   &kp Q &kp Y &kp F &kp P &kp G   &kp J &kp L  &kp U     &kp W   &qoutes    &kp LEFT_BRACKET
    &kp ESC &kp A &kp I &kp S &kp T &kp D   &hhome &narrow  &errow     &rrrow   &orrow &ender
-   &kp LCTRL &kp Z &kp X &kp C &kp V &kp B   &kp K &kp M  &comma &dot &kp SEMI &kp APOS
+   &ctrl &kp Z &kp X &kp C &kp V &kp B   &kp K &kp M  &comma &dot &kp SEMI &kp APOS
                    &super &symbols &kp SPACE   &kp LSHFT &backspace &alt
                         >;
                 };
