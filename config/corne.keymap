@@ -173,8 +173,8 @@
                         display-name = "G-Symbol";
                         bindings = <
    &alt    &kp H   &kp N4 &kp N5 &kp N6 &kp N    &kp RA(EQUAL)  &kp RA(N8) &kp RA(N9) &kp PIPE  &kp PLUS &kp RBRC
-   &kp LCTRL &kp N0   &kp N1 &kp N2 &kp N3 &kp E    &kp FSLH &kp STAR &kp LPAR &kp RA(N7)  &kp RA(N0)  &kp MINUS
-   &kp LSHFT &kp R &kp N7 &kp N8 &kp N9 &kp O     &kp RA(N2)    &kp RA(NUBS) &kp AMPS &kp EXCL  &kp RA(RBKT) &kp RA(N4)
+   &kp LSHFT &kp N0   &kp N1 &kp N2 &kp N3 &kp E    &kp FSLH &kp STAR &kp LPAR &kp RA(N7)  &kp RA(N0)  &kp MINUS
+   &kp LCTRL &kp R &kp N7 &kp N8 &kp N9 &kp O     &kp RA(N2)    &kp RA(NUBS) &kp AMPS &kp EXCL  &kp RA(RBKT) &kp RA(N4)
                           	&none &trans &none            &kp SPACE &kp DEL &kp LCTRL
                         >;
                 };
