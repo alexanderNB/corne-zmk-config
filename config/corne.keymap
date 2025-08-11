@@ -13,7 +13,6 @@
 #define SYMBOL  2
 #define GAME_SYMBOL  3
 #define FN      4
-
 / {
     behaviors {
         backspace: backspace_ctrl {
@@ -155,10 +154,10 @@
                 game_layer {
                         display-name = "Game";
                         bindings = <
-   &alt      &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans &trans
+   &mt alt TAB      &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans &trans
    &kp LSHFT &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans &trans
    &trans    &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans &trans
-     &td1 &lt GAME_SYMBOL TAB &trans   &trans &trans &trans
+     &td1 &mo GAME_SYMBOL &trans   &trans &trans &trans
                         >;
                 };
                 symbol_layer {
@@ -185,9 +184,9 @@
 // |[]{}@\~$
                         display-name = "G-Symbol";
                         bindings = <
-   &alt    &kp H   &kp N4 &kp N5 &kp N6 &kp N    &kp RA(EQUAL)  &kp RA(N8) &kp RA(N9) &kp PIPE  &kp PLUS &kp RBRC
-   &kp LSHFT &kp N0   &kp N1 &kp N2 &kp N3 &kp E    &kp FSLH &kp STAR &kp LPAR &kp RA(N7)  &kp RA(N0)  &kp MINUS
-   &kp LCTRL &kp R &kp N7 &kp N8 &kp N9 &kp O     &kp RA(N2)    &kp RA(NUBS) &kp AMPS &kp EXCL  &kp RA(RBKT) &kp RA(N4)
+   &trans    &kp H   &kp N4 &kp N5 &kp N6 &kp N    &kp RA(EQUAL)  &kp RA(N8) &kp RA(N9) &kp PIPE  &kp PLUS &kp RBRC
+   &trans &kp N0   &kp N1 &kp N2 &kp N3 &kp E    &kp FSLH &kp STAR &kp LPAR &kp RA(N7)  &kp RA(N0)  &kp MINUS
+   &trans &kp R &kp N7 &kp N8 &kp N9 &kp O     &kp RA(N2)    &kp RA(NUBS) &kp AMPS &kp EXCL  &kp RA(RBKT) &kp RA(N4)
                           	&none &trans &none            &kp SPACE &kp DEL &kp LCTRL
                         >;
                 };
