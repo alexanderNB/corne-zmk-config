@@ -154,7 +154,7 @@
                 game_layer {
                         display-name = "Game";
                         bindings = <
-   &mt alt TAB      &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans &trans
+   &mt LALT TAB      &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans &trans
    &kp LSHFT &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans &trans
    &trans    &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans &trans
      &td1 &mo GAME_SYMBOL &trans   &trans &trans &trans
