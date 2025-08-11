@@ -105,6 +105,7 @@
             #binding-cells = <0>;
             bindings = <&kp LCTRL>, <&mo BSPC>;
             mods = <(MOD_LCTL)>;
+            keep-mods = <(MOD_LCTL)>;
         };
         tog_on: toggle_layer_on_only {
             compatible = "zmk,behavior-toggle-layer";
