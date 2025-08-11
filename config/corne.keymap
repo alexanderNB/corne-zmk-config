@@ -119,6 +119,12 @@
             display-name = "Toggle Layer Off";
             toggle-mode = "off";
         };
+        td0: tap_dance_0 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&super>, <&tog_off GAME>, <&tog_on GAME>;
+        };
     };
 };
 
