@@ -118,18 +118,6 @@
             display-name = "Toggle Layer Off";
             toggle-mode = "off";
         };
-        td0: tap_dance_0 {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&super>, <&tog_off GAME>, <&tog_on GAME>;
-        };
-        td1: tap_dance_1 {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&gamesuper>, <&tog_off GAME>, <&tog_on GAME>;
-        };
     };
 };
 
@@ -148,7 +136,7 @@
    &kp TAB   &kp Q &kp Y &kp F &kp P &kp G   &kp J &kp L  &kp U     &kp W   &qoutes    &kp LEFT_BRACKET
    &kp ESC &kp A &kp I &kp S &kp T &kp D   &hhome &narrow  &errow     &rrrow   &orrow &ender
    &ctrl &kp Z &kp X &kp C &kp V &kp B   &kp K &kp M  &comma &dot &kp SEMI &kp APOS
-                   &td0 &symbols &kp SPACE   &kp LSHFT &backspace &alt
+                   &super &symbols &kp SPACE   &kp LSHFT &backspace &alt
                         >;
                 };
                 game_layer {
@@ -157,7 +145,7 @@
    &mt LALT TAB      &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans &trans
    &kp LSHFT &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans &trans
    &trans    &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans &trans
-     &td1 &mo GAME_SYMBOL &trans   &trans &trans &trans
+     &gamesuper &mo GAME_SYMBOL &trans   &trans &trans &trans
                         >;
                 };
                 symbol_layer {
