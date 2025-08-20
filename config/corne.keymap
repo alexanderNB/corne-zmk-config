@@ -102,7 +102,7 @@
         ctrl: ctrl_backspace {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp LCTRL>, <&mo BSPC>;
+            bindings = <&kp LCTRL>, <&kp BACKSPACE>;
             mods = <(MOD_LCTL)>;
             keep-mods = <(MOD_LCTL)>;
         };
@@ -170,7 +170,7 @@
 // |  %  |  &  |  7  |  8  |  9  |  #  |   |  @  |  \  |  /  |  !  |  ~  |  $  |
 //                    |blank| HELD | BLANK |   | SPACE | CTRL | ALT |
 // |[]{}@\~$
-                        display-name = "G-Symbol";
+                        display-name = "GSymbol";
                         bindings = <
    &trans    &kp H   &kp N4 &kp N5 &kp N6 &kp N    &kp RA(EQUAL)  &kp RA(N8) &kp RA(N9) &kp PIPE  &kp PLUS &kp RBRC
    &trans &kp N0   &kp N1 &kp N2 &kp N3 &kp E    &kp FSLH &kp STAR &kp LPAR &kp RA(N7)  &kp RA(N0)  &kp MINUS
