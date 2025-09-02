@@ -157,7 +157,7 @@
 // |[]{}@\~$
                         display-name = "Symbol";
                         bindings = <
-   &kp NUBS    &kp LS(NUBS)   &kp N4 &kp N5 &kp N6 &kp UNDER    &kp RA(EQUAL)  &kp RA(N8) &kp RA(N9) &kp PIPE  &kp PLUS &kp RBRC
+   &kp NUBS    &kp LS(NUBS)   &kp N4 &kp N5 &kp N6 &kp RA(EQUAL)    &kp UNDER  &kp RA(N8) &kp RA(N9) &kp PIPE  &kp PLUS &kp RBRC
    &kp RPAR &kp N0   &kp N1 &kp N2 &kp N3 &kp QMARK    &kp FSLH &kp STAR &kp LPAR &kp RA(N7)  &kp RA(N0)  &kp MINUS
    &kp PRCNT &kp CARET &kp N7 &kp N8 &kp N9 &kp HASH     &kp RA(N2)    &kp RA(NUBS) &kp AMPS &kp EXCL  &kp RA(RBKT) &kp RA(N4)
                           	&none &trans &none            &kp SPACE &kp DEL &kp LCTRL
@@ -172,7 +172,7 @@
 // |[]{}@\~$
                         display-name = "GSymbol";
                         bindings = <
-   &trans    &kp H   &kp N4 &kp N5 &kp N6 &kp N    &kp RA(EQUAL)  &kp RA(N8) &kp RA(N9) &kp PIPE  &kp PLUS &kp RBRC
+   &trans    &kp H   &kp N4 &kp N5 &kp N6 &kp N    &kp UNDER  &kp RA(N8) &kp RA(N9) &kp PIPE  &kp PLUS &kp RBRC
    &trans &kp N0   &kp N1 &kp N2 &kp N3 &kp E    &kp FSLH &kp STAR &kp LPAR &kp RA(N7)  &kp RA(N0)  &kp MINUS
    &trans &kp R &kp N7 &kp N8 &kp N9 &kp O     &kp RA(N2)    &kp RA(NUBS) &kp AMPS &kp EXCL  &kp RA(RBKT) &kp RA(N4)
                           	&none &trans &none            &kp SPACE &kp DEL &kp LCTRL
