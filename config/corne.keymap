@@ -136,7 +136,7 @@
                         bindings = <
    &kp TAB   &kp Q &kp Y &kp F &kp P &kp G   &kp J &kp L  &kp U     &kp W   &qoutes    &kp LEFT_BRACKET
    &kp ESC &kp A &kp I &kp S &kp T &kp D   &hhome &narrow  &errow     &rrrow   &orrow &ender
-   &ctrl &kp Z &kp X &kp C &kp V &kp B   &kp K &kp M  &comma &dot &kp SEMI &kp APOS
+   &ctrl &kp Z &dot &kp C &kp V &kp B   &kp K &kp M  &comma &kp X &kp SEMI &kp APOS
                    &super &symbols &kp SPACE   &kp LSHFT &backspace &alt
                         >;
                 };
