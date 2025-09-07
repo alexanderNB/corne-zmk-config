@@ -120,6 +120,17 @@
             toggle-mode = "off";
         };
     };
+    macros {
+        symbol_space: space_and_hold_LSHFT {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp SPACE>
+                , <&macro_press &kp LSHFT>
+                , <&macro_release &kp LSHFT>
+                ;
+        };
+    }
 };
 
 / {
@@ -162,15 +173,15 @@
 // -----------------------------------------------------------------------------------------
 // |  <  |  >  |  4  |  5  |  6  |  ?  |   |  |  |  [  |  ]  |  *  |  `  |  ^  |
 // |  =  |  0  |  1  |  2  |  3  |  _  |   |  -  |  (  |  )  |  {  |  }  |  +  |
-// |  %  |  &  |  7  |  8  |  9  |  #  |   |  @  |  \  |  /  |  !  |  ~  |  $  |
+// |  %  |  &  |  7  |  8  |  9  |  #  |   |  @  |  /  |  \  |  !  |  ~  |  $  |
 //                    |blank| HELD | BLANK |   | SPACE | CTRL | ALT |
 // |[]{}@\~$
                         display-name = "Symbol";
                         bindings = <
    &kp NUBS    &kp LS(NUBS)   &kp N4 &kp N5 &kp N6 &kp RA(EQUAL)    &kp UNDER  &kp RA(N8) &kp RA(N9) &kp PIPE  &kp PLUS &kp RBRC
    &kp QMARK &kp N0   &kp N1 &kp N2 &kp N3 &kp RPAR    &kp FSLH &kp STAR &kp LPAR &kp RA(N7)  &kp RA(N0)  &kp MINUS
-   &kp PRCNT &kp CARET &kp N7 &kp N8 &kp N9 &kp HASH     &kp RA(N2)    &kp RA(NUBS) &kp AMPS &kp EXCL  &kp RA(RBKT) &kp RA(N4)
-                          	&none &trans &none            &kp SPACE &kp DEL &kp LCTRL
+   &kp PRCNT &kp CARET &kp N7 &kp N8 &kp N9 &kp HASH     &kp RA(N2)  &kp AMPS  &kp RA(NUBS)  &kp EXCL  &kp RA(RBKT) &kp RA(N4)
+                          	&none &trans &none            &symbol_space &kp DEL &kp LCTRL
                         >;
                 };
                 game_symbol_layer {
@@ -185,7 +196,7 @@
    &trans    &kp H   &kp N4 &kp N5 &kp N6 &kp N    &kp UNDER  &kp RA(N8) &kp RA(N9) &kp PIPE  &kp PLUS &kp RBRC
    &trans &kp N0   &kp N1 &kp N2 &kp N3 &kp E    &kp FSLH &kp STAR &kp LPAR &kp RA(N7)  &kp RA(N0)  &kp MINUS
    &trans &kp R &kp N7 &kp N8 &kp N9 &kp O     &kp RA(N2)    &kp RA(NUBS) &kp AMPS &kp EXCL  &kp RA(RBKT) &kp RA(N4)
-                          	&none &trans &none            &kp SPACE &kp DEL &kp LCTRL
+                          	&none &trans &none            &symbol_space &kp DEL &kp LCTRL
                         >;
                 };
                 fn_layer {
