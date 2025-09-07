@@ -130,7 +130,7 @@
                 , <&macro_release &kp LSHFT>
                 ;
         };
-    ;
+    };
 };
 
 / {
