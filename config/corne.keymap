@@ -119,8 +119,66 @@
             display-name = "Toggle Layer Off";
             toggle-mode = "off";
         };
-
-
+        dollar: shift_surpressed_dollar {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp RA(N4)>, <&kp RA(N4)>;
+            mods = <(MOD_LSFT)>;
+        };
+        tilde: shift_surpressed_tilde {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp RA(RBKT)>, <&kp RA(RBKT)>;
+            mods = <(MOD_LSFT)>;
+        };
+        backslash: shift_surpressed_backslash {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp RA(NUBS)>, <&kp RA(NUBS)>;
+            mods = <(MOD_LSFT)>;
+        };
+        at: shift_surpressed_at {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp RA(N2)>, <&kp RA(N2)>;
+            mods = <(MOD_LSFT)>;
+        };
+        leftbrace: shift_surpressed_leftbrace {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp RA(N7)>, <&kp RA(N7)>;
+            mods = <(MOD_LSFT)>;
+        };
+        rightbrace: shift_surpressed_rightbrace {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp RA(N0)>, <&kp RA(N0)>;
+            mods = <(MOD_LSFT)>;
+        };
+        minus: shift_surpressed_minus {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp FSLH>, <&kp FSLH>;
+            mods = <(MOD_LSFT)>;
+        };
+        plus: shift_surpressed_plus {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp MINUS>, <&kp MINUS>;
+            mods = <(MOD_LSFT)>;
+        };
+        rightbracket: shift_surpressed_rightbracket {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp RA(N9)>, <&kp RA(N9)>;
+            mods = <(MOD_LSFT)>;
+        };
+        leftbracket: shift_surpressed_leftbracket {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp RA(N8)>, <&kp RA(N8)>;
+            mods = <(MOD_LSFT)>;
+        };
         pipe: shift_surpressed_pipe {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -241,23 +299,24 @@
    &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P &kp LEFT_BRACKET 
    &kp ESC &kp A &kp S &kp D &kp F &kp G   &hhome &kp J  &kp K &kp L   &kp SEMI &kp APOS
    &ctrl &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &comma &dot &qoutes &kp ENTER
-                   &super &symbols &kp SPACE   &kp LSHFT &backspace &alt
+                   &super &symbols &kp SPACE   &kp LSHFT &kp BACKSPACE &kp DEL
                         >;
                 };
                 symbol_layer {
 // -----------------------------------------------------------------------------------------
-// |  <  |  >  |  4  |  5  |  6  |  ?  |   |  |  |  [  |  ]  |  *  |  `  |  ^  |
+// |  <  |  >  |  4  |  5  |  6  |  |  |   |  ?  |  [  |  ]  |  *  |  `  |  ^  |
 // |  =  |  0  |  1  |  2  |  3  |  _  |   |  -  |  (  |  )  |  {  |  }  |  +  |
 // |  %  |  &  |  7  |  8  |  9  |  #  |   |  @  |  /  |  \  |  !  |  ~  |  $  |
 //                    |blank| HELD | BLANK |   | SPACE | CTRL | ALT |
-// |[]{}@\~$
+// []-{}+@\\~$
+// RA(N8) RA(N9) FSLH RA(N7) RA(N0) MINUS RA(N2) RA(NUBS) RA(RBKT) RA(N4)
                         display-name = "Symbol";
                         bindings = <
-   &nubs    &kp LS(NUBS)   &num4 &num5 &num6 &pipe    &kp UNDER  &kp RA(N8) &kp RA(N9) &kp PIPE  &kp PLUS &kp RBRC
-   &kp QMARK &num0   &num1 &num2 &num3 &kp RPAR    &kp FSLH &kp STAR &kp LPAR &kp RA(N7)  &kp RA(N0)  &kp MINUS
-   &kp PRCNT &kp CARET &num7 &num8 &num9 &kp HASH     &kp RA(N2)  &kp AMPS  &kp RA(NUBS)  &kp EXCL  &kp RA(RBKT) &kp RA(N4)
-                          	&none &trans &none            &symbol_space &kp DEL &kp LCTRL
-                        >;
+   &nubs    &kp LS(NUBS)   &num4 &num5 &num6 &pipe    &kp UNDER  &leftbracket &rightbracket &kp PIPE  &kp PLUS &kp RBRC
+   &kp QMARK &num0   &num1 &num2 &num3 &kp RPAR    &minus &kp STAR &kp LPAR &leftbrace  &rightbrace  &plus
+   &kp PRCNT &kp CARET &num7 &num8 &num9 &kp HASH     &at  &kp AMPS  &backslash  &kp EXCL  &tilde &dollar
+                          	&none &trans &none            &symbol_space &kp BACKSPACE &kp DEL
+            >;
                 };
                 game_symbol_layer {
 // -----------------------------------------------------------------------------------------
