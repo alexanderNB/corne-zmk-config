@@ -119,6 +119,80 @@
             display-name = "Toggle Layer Off";
             toggle-mode = "off";
         };
+
+
+        pipe: shift_surpressed_pipe {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp RA(EQUAL)>, <&kp RA(EQUAL)>;
+            mods = <(MOD_LSFT)>;
+        };
+        nubs: shift_surpressed_nubs {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp NUBS>, <&kp NUBS>;
+            mods = <(MOD_LSFT)>;
+        };
+        num0: shift_surpressed_0 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N0>, <&kp N0>;
+            mods = <(MOD_LSFT)>;
+        };
+        num1: shift_surpressed_1 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N1>, <&kp N1>;
+            mods = <(MOD_LSFT)>;
+        };
+        num2: shift_surpressed_2 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N2>, <&kp N2>;
+            mods = <(MOD_LSFT)>;
+        };
+        num3: shift_surpressed_3 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N3>, <&kp N3>;
+            mods = <(MOD_LSFT)>;
+        };
+        num4: shift_surpressed_4 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N4>, <&kp N4>;
+            mods = <(MOD_LSFT)>;
+        };
+        num5: shift_surpressed_5 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N5>, <&kp N5>;
+            mods = <(MOD_LSFT)>;
+        };
+        num6: shift_surpressed_6 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N6>, <&kp N6>;
+            mods = <(MOD_LSFT)>;
+        };
+        num7: shift_surpressed_7 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N7>, <&kp N7>;
+            mods = <(MOD_LSFT)>;
+        };
+        num8: shift_surpressed_8 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N8>, <&kp N8>;
+            mods = <(MOD_LSFT)>;
+        };
+        num9: shift_surpressed_9 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N9>, <&kp N9>;
+            mods = <(MOD_LSFT)>;
+        };
     };
     macros {
         symbol_space: space_and_hold_LSHFT {
@@ -179,9 +253,9 @@
 // |[]{}@\~$
                         display-name = "Symbol";
                         bindings = <
-   &kp NUBS    &kp LS(NUBS)   &kp N4 &kp N5 &kp N6 &kp RA(EQUAL)    &kp UNDER  &kp RA(N8) &kp RA(N9) &kp PIPE  &kp PLUS &kp RBRC
-   &kp QMARK &kp N0   &kp N1 &kp N2 &kp N3 &kp RPAR    &kp FSLH &kp STAR &kp LPAR &kp RA(N7)  &kp RA(N0)  &kp MINUS
-   &kp PRCNT &kp CARET &kp N7 &kp N8 &kp N9 &kp HASH     &kp RA(N2)  &kp AMPS  &kp RA(NUBS)  &kp EXCL  &kp RA(RBKT) &kp RA(N4)
+   &nubs    &kp LS(NUBS)   &num4 &num5 &num6 &pipe    &kp UNDER  &kp RA(N8) &kp RA(N9) &kp PIPE  &kp PLUS &kp RBRC
+   &kp QMARK &num0   &num1 &num2 &num3 &kp RPAR    &kp FSLH &kp STAR &kp LPAR &kp RA(N7)  &kp RA(N0)  &kp MINUS
+   &kp PRCNT &kp CARET &kp num7 &kp num8 &kp num9 &kp HASH     &kp RA(N2)  &kp AMPS  &kp RA(NUBS)  &kp EXCL  &kp RA(RBKT) &kp RA(N4)
                           	&none &trans &none            &symbol_space &kp DEL &kp LCTRL
                         >;
                 };
