@@ -85,19 +85,19 @@
         super: lgui_alt_FN {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp LGUI>, <&mo FN>;
+            bindings = <&kp LGUI>, <&FNMacro>;
             mods = <(MOD_LALT)>;
         };
         gamesuper: mtsuper_ESC {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&mt LGUI ESC>, <&mo FN>;
+            bindings = <&mt LGUI ESC>, <&FNMacro>;
             mods = <(MOD_LALT)>;
         };
         alt: alt_lgui_FN {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp LALT>, <&mo FN>;
+            bindings = <&kp LALT>, <&FNMacro>;
             mods = <(MOD_LGUI)>;
         };
         ctrl: ctrl_backspace {
@@ -263,9 +263,17 @@
                 , <&macro_release &kp LSHFT>
                 ;
         };
+        FNMacro: FN_and_let_go_off_mod {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                , <&macro_release &kp LGUI>
+                , <&macro_release &kp LALT>
+                , <&mo FN>
+                ;
+        };
     };
 };
-
 / {
         keymap {
                 compatible = "zmk,keymap";
