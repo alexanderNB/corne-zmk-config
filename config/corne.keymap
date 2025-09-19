@@ -269,7 +269,9 @@
             bindings
                 = <&macro_release &kp LGUI>
                 , <&macro_release &kp LALT>
-                , <&mo FN>
+                , <&macro_press &mo FN>
+                , <&macro_pause_for_release>
+                , <&macro_release &mo FN>
                 ;
         };
     };
