@@ -290,6 +290,9 @@
             bindings
                 = <&macro_press &mo SYMBOL>
                 , <&macro_press &mo GAME_SYMBOL>
+                , <&macro_pause_for_release>
+                , <&macro_release &mo SYMBOL>
+                , <&macro_release &mo GAME_SYMBOL>
                 ;
         };
     };
