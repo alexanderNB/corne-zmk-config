@@ -284,6 +284,14 @@
                 , <&macro_press &tog_off GAME_QWERTY>
                 ;
         };
+        gameSymbol: toggle_game_symbol {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &mo SYMBOL>
+                , <&macro_press &mo GAME_SYMBOL>
+                ;
+        };
     };
 };
 / {
@@ -310,7 +318,7 @@
    &mt LALT TAB  &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans &trans
    &kp LSHFT     &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans &trans
    &trans        &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans &trans
-           &gamesuper &mo GAME_SYMBOL &trans                 &trans &trans &trans
+           &gamesuper &gameLayer &trans                 &trans &trans &trans
                         >;
                 };
                 qwerty_layer {
