@@ -318,7 +318,7 @@
    &mt LALT TAB  &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans &trans
    &kp LSHFT     &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans &trans
    &trans        &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans &trans
-           &gamesuper &gameLayer &trans                 &trans &trans &trans
+           &gamesuper &gameSymbol &trans                 &trans &trans &trans
                         >;
                 };
                 qwerty_layer {
