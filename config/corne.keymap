@@ -353,8 +353,6 @@
                    &trans &trans &trans    &trans &trans &trans  
                         >;
                 };
-
-                };
                 symbol_layer {
                         display-name = "Symbol";
                         bindings = <
