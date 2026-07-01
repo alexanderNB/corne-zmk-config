@@ -12,9 +12,10 @@
 #define GAME        1
 #define QWERTY      2
 #define GAME_QWERTY 3
-#define SYMBOL      4
-#define GAME_SYMBOL 5
-#define FN          6
+#define PIANO       4
+#define SYMBOL      5
+#define GAME_SYMBOL 6
+#define FN          7
 / {
     behaviors {
         backspace: backspace_ctrl {
@@ -341,6 +342,18 @@
    &ctrl   &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &comma &dot &qoutes &kp ENTER
                    &trans &trans &trans    &trans &trans &trans  
                         >;
+                };
+                piano {
+                        display-name = "Piano";
+                        // After LT should be '
+                        bindings = <
+   &kp J &none &kp L  &kp W &kp LT &none          &none &kp S &kp D &kp F &none &kp H
+   &kp N &kp M &comma &dot   &kp AMPS &kp APOS   &kp P &kp Z &kp X &kp C &kp V &kp B
+   &ctrl   &kp Z &kp X &kp C &kp V &kp B          &kp N &kp M  &comma &dot &qoutes &kp ENTER
+                   &trans &trans &trans    &trans &trans &trans  
+                        >;
+                };
+
                 };
                 symbol_layer {
                         display-name = "Symbol";
