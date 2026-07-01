@@ -283,6 +283,7 @@
                 = <&macro_press &tog_off GAME>
                 , <&macro_press &tog_off QWERTY>
                 , <&macro_press &tog_off GAME_QWERTY>
+                , <&macro_press &tog_off PIANO>
                 ;
         };
         gameSymbol: toggle_game_symbol {
