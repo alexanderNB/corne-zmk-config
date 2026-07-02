@@ -304,10 +304,10 @@
                 = <&macro_press &kp LSHFT>
                 , <&macro_param_1to1>
                 , <&macro_press &kp MACRO_PLACEHOLDER>
+                , <&macro_release &kp LSHFT>
                 , <&macro_pause_for_release>
                 , <&macro_param_1to1>
                 , <&macro_release &kp MACRO_PLACEHOLDER>
-                , <&macro_release &kp LSHFT>
                 ;
         };
     };
