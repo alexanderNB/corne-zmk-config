@@ -360,8 +360,8 @@
                 piano {
                         display-name = "Piano";
                         bindings = <
-   &shifted_key D &none          &shifted_key G &shifted_key H &shifted_key J &none/**/&none &shifted_key I &shifted_key O &shifted_key P &none          &shifted_key S
-   &kp D          &kp F          &kp G          &kp H          &kp J          &kp K/**/&kp U &kp I          &kp O          &kp P          &kp A          &kp S
+   &shifted_key D &none          &shifted_key G &shifted_key H &shifted_key J &none/**/&none &shifted_key I &num2 &shifted_key P &none          &shifted_key S
+   &kp D          &num1          &kp G          &kp H          &kp J          &kp K/**/&kp U &kp I          &kp O          &kp P          &kp A          &kp S
    &none          &shifted_key Z &shifted_key X &kp L          &kp Z          &kp X/**/&kp R &kp T          &kp Y          &shifted_key T &shifted_key Y &none
                    &trans &trans &trans    &trans &trans &trans
                         >;
